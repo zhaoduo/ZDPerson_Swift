@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6564FC101F697E75001F09A2 /* ZDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564FC0F1F697E75001F09A2 /* ZDHeaderView.swift */; };
 		6564FC121F698AD0001F09A2 /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564FC111F698AD0001F09A2 /* extention.swift */; };
+		65A18CCA1FF0E9E600799DA1 /* person.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65A18CC91FF0E9E600799DA1 /* person.gif */; };
 		65F8D1261F5D95FF009522F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8D1251F5D95FF009522F2 /* AppDelegate.swift */; };
 		65F8D1281F5D95FF009522F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8D1271F5D95FF009522F2 /* ViewController.swift */; };
 		65F8D12B1F5D95FF009522F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F8D1291F5D95FF009522F2 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		6564FC0F1F697E75001F09A2 /* ZDHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZDHeaderView.swift; sourceTree = "<group>"; };
 		6564FC111F698AD0001F09A2 /* extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
+		65A18CC91FF0E9E600799DA1 /* person.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = person.gif; sourceTree = "<group>"; };
 		65F8D1221F5D95FF009522F2 /* ZDPerson_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZDPerson_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F8D1251F5D95FF009522F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F8D1271F5D95FF009522F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		65F8D1391F5D95FF009522F2 /* ZDPerson_SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				65A18CC91FF0E9E600799DA1 /* person.gif */,
 				65F8D13A1F5D95FF009522F2 /* ZDPerson_SwiftTests.swift */,
 				65F8D13C1F5D95FF009522F2 /* Info.plist */,
 			);
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A18CCA1FF0E9E600799DA1 /* person.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
