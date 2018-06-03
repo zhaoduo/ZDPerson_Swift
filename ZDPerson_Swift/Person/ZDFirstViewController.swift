@@ -54,30 +54,30 @@ class ZDFirstViewController: ZDBaseTableTableViewController {
     // MARK: -UI设置
     
     //override 重写父类方法
-    override func setNewContentOffset(_ offset:CGFloat,tag:Int){
-        
-        if tag != 1000 {
-            
-            let offetY = self.tableView.contentOffset.y
-            
-            let tempHeight = HEADERVIEW_HEIGHT - 64 - 44
-            
-            if offset > tempHeight {
-                
-                if offetY < tempHeight{
-                    
-                    self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: tempHeight), animated: true)
-                    
-                }
-            }
-            
-            if offset <= 0 {
-                self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: CGFloat(0)), animated: true)
-            }
-            
-        }
-        
-    }
+//    override func setNewContentOffset(_ offset:CGFloat,tag:Int){
+//        
+//        if tag != 1000 {
+//            
+//            let offetY = self.tableView.contentOffset.y
+//            
+//            let tempHeight = HEADERVIEW_HEIGHT - 64 - 44
+//            
+//            if offset > tempHeight {
+//                
+//                if offetY < tempHeight{
+//                    
+//                    self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: tempHeight), animated: true)
+//                    
+//                }
+//            }
+//            
+//            if offset <= 0 {
+//                self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: CGFloat(0)), animated: true)
+//            }
+//            
+//        }
+//        
+//    }
     
     
     

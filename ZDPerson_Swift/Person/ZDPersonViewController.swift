@@ -48,7 +48,7 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
         
         let offetY = scrollView.contentOffset.y
         
-        print(" 偏移________________\(offetY) ______   tag值为\(scrollView.tag)_____选中————\(selectTag)")
+//        print(" 偏移________________\(offetY) ______   tag值为\(scrollView.tag)_____选中————\(selectTag)")
         
         if scrollView.tag != selectTag {
             return
@@ -58,9 +58,6 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
         secondVC .setNewContentOffset(offetY, tag: scrollView.tag)
         thirdVC .setNewContentOffset(offetY, tag: scrollView.tag)
         
-        //改变导航栏的背景颜色
-        
-        
         //改变头部视图的位置
         let tempHeight = HEADERVIEW_HEIGHT - IS_NavigationBarHeight - 44
         if offetY <= tempHeight {
@@ -68,7 +65,8 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
             let y = -scrollView.contentOffset.y
             frame.origin.y = y
             self.headerView.frame = frame
-            self.navigationBgView.backgroundColor = UIColor.init(white: 1, alpha: offetY/tempHeight)
+//            self.navigationBgView.backgroundColor = UIColor.init(white: 1, alpha: offetY/tempHeight)
+            self.navigationBgView.backgroundColor = UIColor.brown.withAlphaComponent(offetY/tempHeight)
             
         }else{
             var frame = self.headerView.frame
@@ -76,7 +74,7 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
             frame.origin.y = y
             self.headerView.frame = frame
             
-            self.navigationBgView.backgroundColor = UIColor.white
+            self.navigationBgView.backgroundColor = UIColor.brown
         }
         
         //下拉放大
@@ -92,7 +90,6 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Celldentifier, for: indexPath)
         //随即色
-//        cell.backgroundColor = UIColor.init(red: CGFloat(arc4random() % 256) / 255.0, green: CGFloat(arc4random() % 256) / 255.0, blue: CGFloat(arc4random() % 256) / 255.0, alpha: 1.0)
         
          let vc = self.childViewControllers[indexPath.row]
 
@@ -142,7 +139,7 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
 //        navigationBgView.backgroundColor = UIColor.red
         self.navigationController?.navigationBar.addSubview(navigationBgView)
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.brown
         
         selectTag = 1000
         
@@ -189,7 +186,7 @@ class ZDPersonViewController: UIViewController,UICollectionViewDataSource,UIColl
         
         headerView = ZDHeaderView.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: HEADERVIEW_HEIGHT))
         headerView.delegate = self
-        headerView.backgroundColor = UIColor.white
+        headerView.backgroundColor = UIColor.brown
         self.view.addSubview(headerView)
     }
 }

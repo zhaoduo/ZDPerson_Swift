@@ -14,19 +14,12 @@ protocol ZDBaseTableViewDelegate:NSObjectProtocol {
 
 class ZDBaseTableTableViewController: UITableViewController {
 
-    func setNewContentOffset(_ offset:CGFloat,tag:Int){}
+//    func setNewContentOffset(_ offset:CGFloat,tag:Int){}
     
     weak var delegate:ZDBaseTableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         
     }
     
@@ -36,6 +29,21 @@ class ZDBaseTableTableViewController: UITableViewController {
         }
     }
     
+     func setNewContentOffset(_ offset:CGFloat,tag:Int){
+        if tag != self.tableView.tag {
+            let tempHeight = HEADERVIEW_HEIGHT - 64 - 44
+            
+            if offset > tempHeight {
+                self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: tempHeight), animated: true)
+            }else{
+                self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: offset), animated: true)
+            }
+            
+            if offset <= 0 {
+                self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: CGFloat(0)), animated: true)
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
