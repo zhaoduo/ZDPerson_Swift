@@ -49,29 +49,6 @@ class ZDThreeViewController: ZDBaseTableTableViewController {
     
     
     //override 重写父类方法
-//    override func setNewContentOffset(_ offset:CGFloat,tag:Int){
-//        
-//        if tag != 1002 {
-//            
-//            let offetY = self.tableView.contentOffset.y
-//            
-//            let tempHeight = HEADERVIEW_HEIGHT - 64 - 44
-//            
-//            if offset > tempHeight {
-//                if offetY < tempHeight{
-//                    
-//                    self.tableView .setContentOffset(CGPoint.init(x: CGFloat(0), y: tempHeight), animated: true)
-//                    
-//                }
-//            }
-//            
-//            if offset <= 0 {
-//                self.tableView .setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
-//            }
-//            
-//        }
-//        
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
